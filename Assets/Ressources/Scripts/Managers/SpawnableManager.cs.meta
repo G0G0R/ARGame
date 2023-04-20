@@ -3,7 +3,10 @@ guid: 76616e3139281c54bad7107d05494b6e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_RaycastManager: {instanceID: 0}
+  - spawnablePrefab: {fileID: 919132149155446097, guid: 7812b01edde9567488a06933cfe1024f,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
