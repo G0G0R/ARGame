@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using System.Linq;
 
 public class SpawnableManager : MonoBehaviour
 {
@@ -10,8 +12,13 @@ public class SpawnableManager : MonoBehaviour
     [SerializeField]
     ARRaycastManager m_RaycastManager;
     List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
+   
+    
     [SerializeField]
-    GameObject spawnablePrefab;
+    private GameObject spawnablePrefab;
+
+    [SerializeField]
+    private List<GameObject> spawnablePrefabs;
 
     Camera arCam;
     GameObject spawnedObject;
@@ -19,7 +26,9 @@ public class SpawnableManager : MonoBehaviour
     [SerializeField]
     private EnumGameModes mode;
 
-   
+    [SerializeField]
+    private TextMeshProUGUI textMesh;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,5 +109,17 @@ public class SpawnableManager : MonoBehaviour
     {
         mode = EnumGameModes.AMELIORATION;
     
+    }
+
+    public void Construction(int index)
+    {
+        spawnablePrefab = spawnablePrefabs.Find(item => item.GetComponent<Batiment>().Index == index);
+        Debug.Log("valeur de spawnablePrefab");
+        Debug.Log(spawnablePrefab);
+    }
+
+    public void AfficheNomPrefab ()
+    {
+        textMesh.text = spawnablePrefab.GetComponent<Batiment>().Intitule;
     }
 }

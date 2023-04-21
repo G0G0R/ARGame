@@ -127,3 +127,5 @@ MonoBehaviour:
   batimentToUpdate: {fileID: 1435923350886463919, guid: 8840e15ed61093746b9bfebc14a4cda4,
     type: 3}
   prix: 100
+  intitule: Echoppe
+  index: 1

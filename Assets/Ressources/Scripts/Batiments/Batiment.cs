@@ -12,6 +12,18 @@ public abstract class Batiment : MonoBehaviour
     [SerializeField]
     private int prix;
 
+    [SerializeField]
+    private string intitule;
+
+    public string Intitule { get => intitule; }
+
+
+    [SerializeField]
+    private int index;
+
+    public int Index { get => index; }
+
+
     public int Prix { get => prix; }
 
 
