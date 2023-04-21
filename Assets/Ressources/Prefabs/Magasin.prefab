@@ -126,3 +126,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batimentToUpdate: {fileID: 0}
   prix: 200
+  intitule: Magasin
+  index: 2
