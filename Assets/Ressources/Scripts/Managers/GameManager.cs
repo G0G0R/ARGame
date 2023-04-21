@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI affichage_argent;
 
+    [SerializeField]
+    private EnumGameModes gameMode;
+
     private static GameManager instance;
 
     public static GameManager Instance
@@ -27,6 +30,9 @@ public class GameManager : MonoBehaviour
             return instance;
         }
     }
+
+    public EnumGameModes GameModes { get => gameMode;  }
+
     
     // Start is called before the first frame update
     void Start()
@@ -40,6 +46,14 @@ public class GameManager : MonoBehaviour
     {
         
     }
+    public void ChangeGameMode(int gm)
+    {
+        gameMode = (EnumGameModes)Enum.ToObject(typeof(EnumGameModes), gm);
+        DisplayMode.Instance.ChangeGameModeDisplay(gameMode);
+        //todo, make other change relatives to game mode
+    }
+
+
 
     public void UpdateTextArgent()
     {
