@@ -26,9 +26,6 @@ public class SpawnableManager : MonoBehaviour
     [SerializeField]
     private EnumGameModes mode;
 
-    [SerializeField]
-    private TextMeshProUGUI textMesh;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -116,10 +113,5 @@ public class SpawnableManager : MonoBehaviour
         spawnablePrefab = spawnablePrefabs.Find(item => item.GetComponent<Batiment>().Index == index);
         Debug.Log("valeur de spawnablePrefab");
         Debug.Log(spawnablePrefab);
-    }
-
-    public void AfficheNomPrefab ()
-    {
-        textMesh.text = spawnablePrefab.GetComponent<Batiment>().Intitule;
     }
 }
