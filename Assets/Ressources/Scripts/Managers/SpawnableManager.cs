@@ -65,7 +65,7 @@ public class SpawnableManager : MonoBehaviour
                         }
                         else
                         {
-                            spawnedObject = hit.collider.gameObject;
+                            TooltipManager._instance.SetAndShowTooltip(hit.collider.gameObject);
                         }
                     }
                     else if(mode == EnumGameModes.CREATION)
