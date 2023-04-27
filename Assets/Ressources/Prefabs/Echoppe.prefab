@@ -128,4 +128,8 @@ MonoBehaviour:
     type: 3}
   prix: 100
   intitule: Echoppe
+  capacite: 0
+  production_nourriture: 0
+  production_argent: 10
+  nb_travailleurs_total: 5
   index: 1

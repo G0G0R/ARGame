@@ -86,9 +86,19 @@ public class SpawnableManager : MonoBehaviour
 
     private void SpawnPrefab(Vector3 spawnPosition)
     {
-        if (GameManager.Instance.UpdateMonnaie(-spawnablePrefab.GetComponent<Batiment>().Prix))
-        {
+        if (GameManager.Instance.UpdateMonnaie(-spawnablePrefab.GetComponent<Batiment>().Prix)) {
             spawnedObject = Instantiate(spawnablePrefab, spawnPosition, Quaternion.identity);
+            GameManager.Instance.AjouterBatiment(spawnedObject.GetComponent<Batiment>());
+            if (spawnablePrefab.GetComponent<Batiment>().Capacite > 0)
+            {
+                GameManager.Instance.UpdateHabitants(spawnedObject.GetComponent<Batiment>().Capacite);
+                GameManager.Instance.UpdateHabitantsDisponibles(spawnedObject.GetComponent<Batiment>().Capacite);
+                GameManager.Instance.AttribuerTravailleursAll();
+            }
+            else
+            {
+                GameManager.Instance.AttribuerTravailleurs(spawnedObject.GetComponent<Batiment>());
+            }
         }
     }
 
@@ -111,7 +121,5 @@ public class SpawnableManager : MonoBehaviour
     public void Construction(int index)
     {
         spawnablePrefab = spawnablePrefabs.Find(item => item.GetComponent<Batiment>().Index == index);
-        Debug.Log("valeur de spawnablePrefab");
-        Debug.Log(spawnablePrefab);
     }
 }

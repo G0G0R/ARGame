@@ -127,4 +127,8 @@ MonoBehaviour:
   batimentToUpdate: {fileID: 0}
   prix: 200
   intitule: Grand Moulin
+  capacite: 0
+  production_nourriture: 100
+  production_argent: 0
+  nb_travailleurs_total: 10
   index: 12
