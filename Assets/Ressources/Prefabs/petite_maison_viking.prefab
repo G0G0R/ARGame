@@ -1189,7 +1189,7 @@ Transform:
   m_GameObject: {fileID: 5353557686278215704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 694.62854, y: 0.035039134, z: 873.6914}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5762098881546766964}
@@ -1232,6 +1232,7 @@ MonoBehaviour:
   capacite: 10
   production_nourriture: 0
   production_argent: 0
+  nb_travailleurs_total: 0
   index: 22
 --- !u!65 &5972468330127571576
 BoxCollider:
