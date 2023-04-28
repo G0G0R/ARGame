@@ -4,7 +4,9 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.EventSystems;
 
 public class SpawnableManager : MonoBehaviour
 {
@@ -19,6 +21,9 @@ public class SpawnableManager : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> spawnablePrefabs;
+
+    [SerializeField]
+    private GameObject uiPanel;
 
     Camera arCam;
     GameObject spawnedObject;
@@ -48,9 +53,10 @@ public class SpawnableManager : MonoBehaviour
         {
             if (Input.GetTouch(0).phase == TouchPhase.Began && spawnedObject == null)
             {
-                if (Physics.Raycast(ray, out hit))
+                bool isOverUI = IsPointOverUIObject(Input.GetTouch(0).position);
+                if (Physics.Raycast(ray, out hit) && !isOverUI)
                 {
-                    if(hit.collider.gameObject.tag == "Spawnable")
+                    if(hit.collider.gameObject.tag == "Spawnable" && hit.collider.gameObject.tag!= "UI")
                     {
                         if (mode == EnumGameModes.DELETION)
                         {
@@ -62,7 +68,7 @@ public class SpawnableManager : MonoBehaviour
                         }
                         else
                         {
-                            TooltipManager._instance.SetAndShowTooltip(hit.collider.gameObject);
+                            TooltipManager._instance.SetAndShowTooltip(hit.collider.gameObject, m_Hits[0].pose.position);
                         }
                     }
                     else if(mode == EnumGameModes.CREATION)
@@ -121,5 +127,18 @@ public class SpawnableManager : MonoBehaviour
     public void Construction(int index)
     {
         spawnablePrefab = spawnablePrefabs.Find(item => item.GetComponent<Batiment>().Index == index);
+    }
+
+    public bool IsPointOverUIObject(Vector2 pos)
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return false;
+
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(pos.x, pos.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+
     }
 }

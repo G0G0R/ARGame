@@ -88,7 +88,7 @@ public class PlaneManager : MonoBehaviour
                     plane1.GetComponent<MeshFilter>().mesh = newMesh;
 
                     // Destroy the second plane's GameObject
-                    plane2.gameObject.SetActive(false);
+                    //plane2.gameObject.SetActive(false);
                     print("DESTROY MERGE");
                     // Remove the second plane from the updatedPlanes list
                     updatedPlanes.RemoveAt(j);

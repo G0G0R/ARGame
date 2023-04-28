@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 22732921}
   m_Layer: 0
   m_Name: AR Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 333430116}
   m_Layer: 5
   m_Name: Batiment
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -398,9 +398,12 @@ GameObject:
   - component: {fileID: 374299837}
   - component: {fileID: 374299839}
   - component: {fileID: 374299838}
+  - component: {fileID: 374299840}
+  - component: {fileID: 374299841}
+  - component: {fileID: 374299842}
   m_Layer: 4
   m_Name: TooltipBackground
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -470,7 +473,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1063545457}
+      - m_Target: {fileID: 374299841}
         m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
         m_MethodName: HideTooltip
         m_Mode: 1
@@ -570,6 +573,59 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &374299840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374299832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+--- !u!114 &374299841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374299832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fe2858216e84245a84ee10a89fa577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 869265270}
+  batimentObject: {fileID: 0}
+--- !u!61 &374299842
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374299832}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &384110573
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +640,7 @@ GameObject:
   - component: {fileID: 384110575}
   m_Layer: 5
   m_Name: Batiment
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -957,7 +1013,7 @@ GameObject:
   - component: {fileID: 545621083}
   m_Layer: 5
   m_Name: Close
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1026,7 +1082,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1063545457}
+      - m_Target: {fileID: 374299841}
         m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
         m_MethodName: HideTooltip
         m_Mode: 1
@@ -1293,7 +1349,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 5.4938107e-17}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 2.2370037e+18}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1324,7 +1380,7 @@ GameObject:
   - component: {fileID: 730023002}
   m_Layer: 5
   m_Name: Stats
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1384,8 +1440,8 @@ MonoBehaviour:
   spawnablePrefabs:
   - {fileID: 1435923350886463919, guid: 58ca17f29c6c5fe4e92d5c908a9f2258, type: 3}
   - {fileID: 1435923350886463919, guid: 8840e15ed61093746b9bfebc14a4cda4, type: 3}
+  uiPanel: {fileID: 374299832}
   mode: 0
-  textMesh: {fileID: 0}
 --- !u!4 &782628377
 Transform:
   m_ObjectHideFlags: 0
@@ -1732,7 +1788,7 @@ GameObject:
   - component: {fileID: 869265272}
   m_Layer: 5
   m_Name: TooltipText
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2056,7 +2112,7 @@ GameObject:
   - component: {fileID: 964807732}
   m_Layer: 5
   m_Name: Bouttons
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2285,12 +2341,13 @@ GameObject:
   - component: {fileID: 1063545460}
   - component: {fileID: 1063545459}
   - component: {fileID: 1063545458}
-  - component: {fileID: 1063545457}
   - component: {fileID: 1063545463}
   - component: {fileID: 1063545462}
+  - component: {fileID: 1063545464}
+  - component: {fileID: 1063545465}
   m_Layer: 5
   m_Name: TooltipBox
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2316,23 +2373,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 300, y: 818}
+  m_AnchoredPosition: {x: 293, y: 553}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: -1}
---- !u!114 &1063545457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1063545455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91fe2858216e84245a84ee10a89fa577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 869265270}
-  batimentObject: {fileID: 0}
 --- !u!114 &1063545458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2435,6 +2478,44 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!225 &1063545464
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063545455}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!61 &1063545465
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063545455}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1568208565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63945adc7f6449c4da79bc8a7594dd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  argent: 1000
+  argent: 10000000
   affichage_argent: {fileID: 1632524230}
   gameMode: 0
 --- !u!4 &1568208567
@@ -2498,7 +2579,7 @@ GameObject:
   - component: {fileID: 1589017365}
   m_Layer: 5
   m_Name: Ameliorer
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2567,7 +2648,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1063545457}
+      - m_Target: {fileID: 374299841}
         m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
         m_MethodName: Ameliorer
         m_Mode: 1
@@ -2940,7 +3021,7 @@ GameObject:
   - component: {fileID: 1694116148}
   m_Layer: 5
   m_Name: Supprimer
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3009,7 +3090,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1063545457}
+      - m_Target: {fileID: 374299841}
         m_TargetAssemblyTypeName: TooltipManager, Assembly-CSharp
         m_MethodName: Supprimer
         m_Mode: 1
