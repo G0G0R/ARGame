@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spawnable
   - Build button
+  - UI
   layers:
   - Default
   - TransparentFX
