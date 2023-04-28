@@ -127,4 +127,8 @@ MonoBehaviour:
   batimentToUpdate: {fileID: 0}
   prix: 200
   intitule: Magasin
+  capacite: 0
+  production_nourriture: 0
+  production_argent: 20
+  nb_travailleurs_total: 10
   index: 2

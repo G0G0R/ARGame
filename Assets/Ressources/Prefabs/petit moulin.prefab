@@ -128,4 +128,8 @@ MonoBehaviour:
     type: 3}
   prix: 100
   intitule: Petit Moulin
+  capacite: 0
+  production_nourriture: 50
+  production_argent: 0
+  nb_travailleurs_total: 5
   index: 11

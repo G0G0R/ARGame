@@ -425,6 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3278355986107978836}
   - component: {fileID: -5130523742751230228}
+  - component: {fileID: 1032508021694667354}
   m_Layer: 0
   m_Name: tente_viking
   m_TagString: Spawnable
@@ -473,7 +474,23 @@ MonoBehaviour:
     type: 3}
   prix: 100
   intitule: Tente
+  capacite: 10
+  production_nourriture: 0
+  production_argent: 0
   index: 21
+--- !u!65 &1032508021694667354
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2753071334220992238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.8791504, y: 2.8587344, z: 5.786133}
+  m_Center: {x: 0.028686523, y: 1.179425, z: -2.3278809}
 --- !u!1 &3116236416752200107
 GameObject:
   m_ObjectHideFlags: 0
