@@ -254,6 +254,7 @@ UnityEngine.CanvasGroup::get_ignoreParentGroups
 UnityEngine.CanvasGroup::get_interactable
 UnityEngine.CanvasGroup::get_alpha
 UnityEngine.CanvasGroup::set_alpha
+UnityEngine.CanvasGroup::set_blocksRaycasts
 UnityEngine.CanvasRenderer::get_cull
 UnityEngine.CanvasRenderer::get_cullTransparentMesh
 UnityEngine.CanvasRenderer::get_hasMoved
@@ -563,6 +564,7 @@ UnityEngine.Mesh::UploadMeshDataImpl
 UnityEngine.Mesh::get_bounds_Injected
 UnityEngine.Mesh::set_bounds_Injected
 UnityEngine.MeshCollider::set_sharedMesh
+UnityEngine.MeshFilter::set_mesh
 UnityEngine.MeshFilter::set_sharedMesh
 UnityEngine.MeshFilter::get_mesh
 UnityEngine.MeshFilter::get_sharedMesh
