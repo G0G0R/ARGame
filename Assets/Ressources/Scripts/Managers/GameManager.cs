@@ -225,4 +225,11 @@ public class GameManager : MonoBehaviour
     {
         this.batiments_list.Remove(batiment);
     }
+     
+    public List<Batiment> getBatiments_list()
+    {
+        return batiments_list;
+    }
+
+
 }

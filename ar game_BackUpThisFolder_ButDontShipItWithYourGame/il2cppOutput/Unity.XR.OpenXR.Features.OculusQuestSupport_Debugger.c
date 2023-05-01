@@ -34,11 +34,11 @@ static const Il2CppMethodExecutionContextInfoIndex g_methodExecutionContextInfoI
 IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport[];
 Il2CppSequencePoint g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport[5] = 
 {
-	{ 33838, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 } /* seqPointIndex: 0 */,
-	{ 33838, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 } /* seqPointIndex: 1 */,
-	{ 33838, 1, 39, 39, 9, 40, 0, kSequencePointKind_Normal, 0, 2 } /* seqPointIndex: 2 */,
-	{ 33838, 1, 43, 43, 9, 41, 7, kSequencePointKind_Normal, 0, 3 } /* seqPointIndex: 3 */,
-	{ 33838, 1, 43, 43, 9, 41, 15, kSequencePointKind_StepOut, 0, 4 } /* seqPointIndex: 4 */,
+	{ 33938, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 } /* seqPointIndex: 0 */,
+	{ 33938, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 } /* seqPointIndex: 1 */,
+	{ 33938, 1, 39, 39, 9, 40, 0, kSequencePointKind_Normal, 0, 2 } /* seqPointIndex: 2 */,
+	{ 33938, 1, 43, 43, 9, 41, 7, kSequencePointKind_Normal, 0, 3 } /* seqPointIndex: 3 */,
+	{ 33938, 1, 43, 43, 9, 41, 15, kSequencePointKind_StepOut, 0, 4 } /* seqPointIndex: 4 */,
 };
 #else
 extern Il2CppSequencePoint g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport[];
@@ -52,7 +52,7 @@ static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppSequencePointSourceFile g_sequencePointSourceFiles[] = {
 { "", { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0} }, //0 
-{ "C:\\Users\\admin\\Documents\\ARGame\\Library\\PackageCache\\com.unity.xr.openxr@1.7.0\\OculusQuest\\Runtime\\OculusQuestFeature.cs", { 242, 214, 92, 208, 175, 60, 195, 39, 222, 54, 171, 238, 107, 143, 79, 43} }, //1 
+{ "D:\\developpement\\AR game\\Library\\PackageCache\\com.unity.xr.openxr@1.7.0\\OculusQuest\\Runtime\\OculusQuestFeature.cs", { 242, 214, 92, 208, 175, 60, 195, 39, 222, 54, 171, 238, 107, 143, 79, 43} }, //1 
 };
 #else
 static const Il2CppSequencePointSourceFile g_sequencePointSourceFiles[1] = { NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -60,7 +60,7 @@ static const Il2CppSequencePointSourceFile g_sequencePointSourceFiles[1] = { NUL
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[1] = 
 {
-	{ 4787, 1 },
+	{ 4801, 1 },
 };
 #else
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[1] = { { 0, 0 } };
