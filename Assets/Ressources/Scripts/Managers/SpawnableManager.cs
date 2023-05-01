@@ -34,7 +34,7 @@ public class SpawnableManager : MonoBehaviour
     [SerializeField]
     private EnumGameModes mode;
 
-    public float smallGuySpeed = 1.0f;
+    public float smallGuySpeed = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -101,18 +101,21 @@ public class SpawnableManager : MonoBehaviour
             spawnedObject = Instantiate(spawnablePrefab, spawnPosition, Quaternion.identity);
             GameManager.Instance.AjouterBatiment(spawnedObject.GetComponent<Batiment>());
 
-            GameObject nearestBuilding = FindNearestBuildingWithCapacity(spawnPosition);
-            if (nearestBuilding != null)
+            if (spawnedObject.GetComponent<Batiment>().Capacite <= 0)
             {
-                Vector3 startPosition = nearestBuilding.transform.position;
-                GameObject smallGuy = Instantiate(smallBoys, startPosition, Quaternion.identity);
+                GameObject nearestBuilding = FindNearestBuildingWithCapacity(spawnPosition);
+                if (nearestBuilding != null)
+                {
+                    Vector3 startPosition = nearestBuilding.transform.position;
+                    GameObject smallGuy = Instantiate(smallBoys, startPosition, Quaternion.identity);
 
-                // Tourner le smallGuy vers la destination dès son apparition
-                Vector3 direction = (spawnedObject.transform.position - startPosition).normalized;
-                Quaternion targetRotation = Quaternion.LookRotation(direction);
-                smallGuy.transform.rotation = targetRotation;
+                    // Tourner le smallGuy vers la destination dès son apparition
+                    Vector3 direction = (spawnedObject.transform.position - startPosition).normalized;
+                    Quaternion targetRotation = Quaternion.LookRotation(direction);
+                    smallGuy.transform.rotation = targetRotation;
 
-                StartCoroutine(MoveToTarget(smallGuy, spawnedObject.transform.position));
+                    StartCoroutine(MoveToTarget(smallGuy, spawnedObject.transform.position));
+                }
             }
 
             if (spawnablePrefab.GetComponent<Batiment>().Capacite > 0)
@@ -194,5 +197,7 @@ public class SpawnableManager : MonoBehaviour
 
         // Arrivé à la destination
         smallGuy.transform.position = targetPosition;
+
+        Destroy(smallGuy);
     }
 }
