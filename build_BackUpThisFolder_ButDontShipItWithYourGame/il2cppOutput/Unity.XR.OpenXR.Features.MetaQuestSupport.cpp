@@ -20,7 +20,6 @@ struct String_t;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 
-IL2CPP_EXTERN_C const RuntimeMethod* MetaQuestFeature__ctor_m5252F2B3583ED0398B5E04ECE2892C240D4F4E63_RuntimeMethod_var;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -224,14 +223,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OpenXRFeature__ctor_m120460E34ECC22ED2DB
 // System.Void UnityEngine.XR.OpenXR.Features.MetaQuestSupport.MetaQuestFeature::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaQuestFeature__ctor_m5252F2B3583ED0398B5E04ECE2892C240D4F4E63 (MetaQuestFeature_t8E2B25DD2DCD3C6B43B6AA0B69C4504566363C62* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MetaQuestFeature__ctor_m5252F2B3583ED0398B5E04ECE2892C240D4F4E63_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MetaQuestFeature__ctor_m5252F2B3583ED0398B5E04ECE2892C240D4F4E63_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		OpenXRFeature__ctor_m120460E34ECC22ED2DB96797A6DCB5C870E78852(__this, NULL);
 		return;

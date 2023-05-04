@@ -20,9 +20,6 @@ struct String_t;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport[];
-IL2CPP_EXTERN_C const RuntimeMethod* OculusQuestFeature__ctor_mF38393F1A5FA04C3AF781D82EC58A4CBB9D85AA2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeType* OculusQuestFeature_tF5FA7128BB36F546D5CF7094A93B812DAC667810_0_0_0_var;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -197,27 +194,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OpenXRFeature__ctor_m120460E34ECC22ED2DB
 // System.Void UnityEngine.XR.OpenXR.Features.OculusQuestSupport.OculusQuestFeature::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OculusQuestFeature__ctor_mF38393F1A5FA04C3AF781D82EC58A4CBB9D85AA2 (OculusQuestFeature_tF5FA7128BB36F546D5CF7094A93B812DAC667810* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OculusQuestFeature__ctor_mF38393F1A5FA04C3AF781D82EC58A4CBB9D85AA2_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OculusQuestFeature_tF5FA7128BB36F546D5CF7094A93B812DAC667810_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, OculusQuestFeature__ctor_mF38393F1A5FA04C3AF781D82EC58A4CBB9D85AA2_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport + 0));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport + 1));
 	{
 		// public bool targetQuest = true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport + 2));
 		__this->___targetQuest_17 = (bool)1;
 		// public bool targetQuest2 = true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport + 3));
 		__this->___targetQuest2_18 = (bool)1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport + 4));
 		OpenXRFeature__ctor_m120460E34ECC22ED2DB96797A6DCB5C870E78852(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_OpenXR_Features_OculusQuestSupport + 4));
 		return;
 	}
 }

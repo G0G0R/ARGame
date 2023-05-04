@@ -1824,13 +1824,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batimentToUpdate: {fileID: 3529125755023769478, guid: e8c2850337a26ce4886f76aca98b5e6f,
     type: 3}
-  prix: 100
+  prix: 1500
   intitule: Grand Moulin
   capacite: 0
-  production_nourriture: 40
+  production_nourriture: 400
   production_argent: 0
-  nb_travailleurs_total: 7
-  index: 12
+  nb_travailleurs_total: 25
+  index: 14
 --- !u!65 &-6317896961485388207
 BoxCollider:
   m_ObjectHideFlags: 0

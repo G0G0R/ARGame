@@ -903,7 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd2ea57c597b9e448f5dab2e0fb346d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batimentToUpdate: {fileID: 3529125755023769478, guid: b04b61eb47d4eaf4e9e8161b7717e2c9,
+  batimentToUpdate: {fileID: 1820147928906015727, guid: 65c0e6278164bbd4bac8613ca899c3b0,
     type: 3}
   prix: 500
   intitule: Grande Maison

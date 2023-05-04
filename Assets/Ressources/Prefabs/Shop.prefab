@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b90a4f0b0fc834d82eef630abb522e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batimentToUpdate: {fileID: 3529125755023769478, guid: 48616f3c9d7e9344ea4c9f0b6cc3094e,
+  batimentToUpdate: {fileID: 2275512558142108728, guid: 773fb31f233182b40af3eb51fe970c18,
     type: 3}
   prix: 20
   intitule: Echoppe

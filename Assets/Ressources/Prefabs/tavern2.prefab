@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1299752801272559957}
+  - component: {fileID: 5797323112118831424}
+  - component: {fileID: 219438844568758496}
   m_Layer: 0
   m_Name: tavern2
-  m_TagString: Untagged
+  m_TagString: Spawnable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +36,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5797323112118831424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820147928906015727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101dd5df18a3cf24b85421699c1f2cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batimentToUpdate: {fileID: 0}
+  prix: 1500
+  intitule: Chateau
+  capacite: 50
+  production_nourriture: 0
+  production_argent: 0
+  nb_travailleurs_total: 0
+  index: 24
+--- !u!65 &219438844568758496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820147928906015727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.805451, y: 4.9537063, z: 6.6736784}
+  m_Center: {x: -0.7883029, y: 1.9768536, z: -0.8189281}
 --- !u!1 &3711336767889279011
 GameObject:
   m_ObjectHideFlags: 0
