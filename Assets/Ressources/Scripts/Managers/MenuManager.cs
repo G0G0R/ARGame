@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
 public class MenuManager : MonoBehaviour
@@ -10,9 +11,33 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> buildButtons;
 
+    [SerializeField]
+    private List<Button> liste_bouttons_1;
+
+    [SerializeField]
+    private List<Button> liste_bouttons_2;
+
+    [SerializeField]
+    private List<Button> liste_bouttons_3;
+
     private CanvasGroup activeCanvasgroup;
 
     private bool mainMenuShown = false;
+
+    private static MenuManager instance;
+
+    public static MenuManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<MenuManager>();
+            }
+
+            return instance;
+        }
+    }
 
     public void AfficherConstructionMenu()
     {
@@ -56,6 +81,33 @@ public class MenuManager : MonoBehaviour
                 activeCanvasgroup = c;
             }
 
+        }
+    }
+
+    public void ActiverBoutonsConstruction(int niveau)
+    {
+        switch(niveau)
+        {
+            case 1:
+                foreach(Button b in liste_bouttons_1)
+                {
+                    b.interactable = true;
+                }
+                break;
+            case 2:
+                foreach (Button b in liste_bouttons_2)
+                {
+                    b.interactable = true;
+                }
+                break;
+            case 3:
+                foreach (Button b in liste_bouttons_3)
+                {
+                    b.interactable = true;
+                }
+                break;
+            default: 
+                break;
         }
     }
 }

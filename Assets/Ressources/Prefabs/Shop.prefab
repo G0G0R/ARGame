@@ -297,13 +297,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b90a4f0b0fc834d82eef630abb522e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batimentToUpdate: {fileID: 0}
-  prix: 100
+  batimentToUpdate: {fileID: 3529125755023769478, guid: 48616f3c9d7e9344ea4c9f0b6cc3094e,
+    type: 3}
+  prix: 20
   intitule: Echoppe
   capacite: 0
   production_nourriture: 0
-  production_argent: 10
-  nb_travailleurs_total: 5
+  production_argent: 5
+  nb_travailleurs_total: 3
   index: 1
 --- !u!65 &3198410482557217750
 BoxCollider:

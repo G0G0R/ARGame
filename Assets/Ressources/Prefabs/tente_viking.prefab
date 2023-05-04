@@ -472,9 +472,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batimentToUpdate: {fileID: 5353557686278215704, guid: 0ab64ba9b29390f49837c44b2d5c865b,
     type: 3}
-  prix: 100
+  prix: 20
   intitule: Tente
-  capacite: 10
+  capacite: 6
   production_nourriture: 0
   production_argent: 0
   nb_travailleurs_total: 0

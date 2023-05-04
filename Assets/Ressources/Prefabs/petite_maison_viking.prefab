@@ -1226,10 +1226,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1655d6495ea0260409d72f4da8490b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batimentToUpdate: {fileID: 0}
-  prix: 200
+  batimentToUpdate: {fileID: 640678545503097823, guid: a78bb7f2b086e104b9af8153bb6ac6d7,
+    type: 3}
+  prix: 50
   intitule: Petite Maison
-  capacite: 10
+  capacite: 15
   production_nourriture: 0
   production_argent: 0
   nb_travailleurs_total: 0

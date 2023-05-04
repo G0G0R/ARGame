@@ -469,12 +469,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batimentToUpdate: {fileID: 6074545130891792190, guid: 7106813c60077374180697af0f080da1,
     type: 3}
-  prix: 100
+  prix: 20
   intitule: Ferme
   capacite: 0
-  production_nourriture: 50
+  production_nourriture: 15
   production_argent: 0
-  nb_travailleurs_total: 5
+  nb_travailleurs_total: 3
   index: 11
 --- !u!65 &8667397339027720564
 BoxCollider:

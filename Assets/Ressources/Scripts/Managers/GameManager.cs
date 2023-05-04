@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int habitants;
     private int habitants_dispo;
+    public int Argent { get => argent; }
+    public int Nourriture { get => nourriture; }
+    public int Habitants { get => habitants; }
 
     [SerializeField]
     private TextMeshProUGUI affichage_argent;
@@ -41,8 +44,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance
     {
-        get 
-        { 
+        get
+        {
             if (instance == null)
             {
                 instance = FindObjectOfType<GameManager>();
@@ -52,9 +55,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public EnumGameModes GameModes { get => gameMode;  }
+    public EnumGameModes GameModes { get => gameMode; }
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,7 +72,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void ChangeGameMode(int gm)
     {
@@ -96,7 +99,7 @@ public class GameManager : MonoBehaviour
     public bool UpdateMonnaie(int monnaie)
     {
         bool res = true;
-        if(this.argent >= -monnaie)
+        if (this.argent >= -monnaie)
         {
             this.argent += monnaie;
             UpdateTextArgent();
@@ -144,18 +147,20 @@ public class GameManager : MonoBehaviour
     {
         int majnourriture = 0;
         int majargent = 0;
-        foreach(Batiment b in this.batiments_list)
+        foreach (Batiment b in this.batiments_list)
         {
             majnourriture += b.getProductionNourriture();
             majargent += b.getProductionArgent();
         }
         UpdateNourriture(majnourriture);
         UpdateMonnaie(majargent);
+
+        LevelManager.Instance.UpdateObjectif();
     }
 
     public void AttribuerTravailleurs(Batiment batiment)
     {
-        if (batiment.NBTravailleursTotal - batiment.NBTravailleurs > this.habitants_dispo )
+        if (batiment.NBTravailleursTotal - batiment.NBTravailleurs > this.habitants_dispo)
         {
             batiment.NBTravailleurs += this.habitants_dispo;
             this.habitants_dispo = 0;
@@ -211,7 +216,7 @@ public class GameManager : MonoBehaviour
     internal void AttribuerTravailleursAll()
     {
         int i = 0;
-        while( i <= this.batiments_list.Count && this.habitants_dispo > 0)
+        while (i <= this.batiments_list.Count && this.habitants_dispo > 0)
         {
             if (!(batiments_list[i].NBTravailleurs == batiments_list[i].NBTravailleursTotal))
             {

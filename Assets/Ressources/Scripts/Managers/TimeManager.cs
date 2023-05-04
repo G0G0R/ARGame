@@ -62,6 +62,7 @@ public class TimeManager : MonoBehaviour
                 if (tick % 5 == 0)
                 {
                     GameManager.Instance.MAJRessources();
+                    LevelManager.Instance.Check();
                 }
 
                 onMinuteChanged?.Invoke();
