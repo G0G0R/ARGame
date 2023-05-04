@@ -8,9 +8,10 @@ public class TooltipManager : MonoBehaviour
 {
 
     public static TooltipManager _instance;
-    public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI infoText;
     public GameObject batimentObject;
     private RectTransform tooltipTransform;
+    private GameObject infoCanva;
 
     private void Awake ()
     {
@@ -25,7 +26,11 @@ public class TooltipManager : MonoBehaviour
     {
         gameObject.SetActive(false);
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
-
+        infoCanva = gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+        infoCanva.SetActive(false);
+        Debug.Log(infoCanva);
+        Debug.Log(gameObject.transform.GetChild(0).gameObject.name);
+        Debug.Log(GameObject.Find("UIelements").name);
     }
 
     // Update is called once per frame
@@ -33,6 +38,7 @@ public class TooltipManager : MonoBehaviour
     {
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(batimentObject.transform.position);
         float scaleFactor = gameObject.transform.GetChild(0).GetComponent<Canvas>().scaleFactor;
+        //float scaleFactor = GameObject.Find("UIelements").transform.GetComponent<Canvas>().scaleFactor;
         Vector2 finalPosition = new Vector2(screenPosition.x / scaleFactor, screenPosition.y / scaleFactor);
         tooltipTransform.anchoredPosition = finalPosition;
     }
@@ -41,36 +47,28 @@ public class TooltipManager : MonoBehaviour
     {
         gameObject.SetActive(true);
         gameObject.transform.GetChild(0).gameObject.SetActive(true);
-        textComponent.text = batiment.GetComponent<Batiment>().Intitule;
         batimentObject = batiment;
-        //print("Position de l'objet spawn :");
-        //print(batiment.transform.position);
-        //print("position du batiment traduite en coord 2D :");
-        //print(Camera.main.WorldToScreenPoint(batiment.transform.position));
-        //print("position du tooltip avant changement:");
-        //print(gameObject.transform.GetChild(0).position);
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(batiment.transform.position);
         float scaleFactor = gameObject.transform.GetChild(0).GetComponent<Canvas>().scaleFactor;
+        //float scaleFactor = GameObject.Find("UIelements").transform.GetComponent<Canvas>().scaleFactor;
         Vector2 finalPosition = new Vector2(screenPosition.x / scaleFactor, screenPosition.y / scaleFactor);
         tooltipTransform.anchoredPosition = finalPosition;
-        //gameObject.transform.GetChild(0).position = batiment.transform.position;
-        //print("position du tooltip après changement:");
-        //print(gameObject.transform.GetChild(0).position);
-
-
     }
 
     public void HideTooltip()
     {
         gameObject.SetActive(false);
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        textComponent.text = string.Empty;
+        CloseInformation();
+
     }
 
     public void Ameliorer()
     {
         batimentObject.GetComponent<Batiment>().Ameliorer();
-        this.textComponent.text = batimentObject.GetComponent<Batiment>().Intitule;
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        gameObject.SetActive(false);
+        CloseInformation();
     }
 
     public void Supprimer()
@@ -78,7 +76,31 @@ public class TooltipManager : MonoBehaviour
         Destroy(batimentObject);
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         gameObject.SetActive(false);
+        CloseInformation();
 
+    }
+
+    public void ShowInformation()
+    {
+        infoCanva.SetActive(true);
+        if (batimentObject.GetComponent<Batiment>().Capacite > 0)
+        {
+            infoText.text = batimentObject.GetComponent<Batiment>().Intitule + "\nCapacité : " + batimentObject.GetComponent<Batiment>().Capacite;
+        }
+        if (batimentObject.GetComponent<Batiment>().getProductionArgent() > 0)
+        {
+            infoText.text = batimentObject.GetComponent<Batiment>().Intitule + "\nProduction d'argent : " + batimentObject.GetComponent<Batiment>().getProductionArgent();
+        }
+        if (batimentObject.GetComponent<Batiment>().getProductionNourriture() > 0)
+        {
+            infoText.text = batimentObject.GetComponent<Batiment>().Intitule + "\nProduction de nourriture : " + batimentObject.GetComponent<Batiment>().getProductionNourriture();
+        }
+
+    }
+
+    public void CloseInformation()
+    {
+        infoCanva.SetActive(false);
     }
 
 }
